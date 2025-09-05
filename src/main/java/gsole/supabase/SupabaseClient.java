@@ -45,7 +45,7 @@ public class SupabaseClient {
 
     // ---------- Categories (Read only) ----------
     public String getCategories() throws IOException {
-        Request request = baseRequest("categories?id,name").get().build();
+        Request request = baseRequest("categories?select=id,name").get().build();
         return executeRequest(request);
     }
 
